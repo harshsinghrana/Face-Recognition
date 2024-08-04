@@ -23,9 +23,9 @@ Name= input("Enter the Name :")
 age = input("Enter the age :")
 
 insert(Id,Name,age)
-samplenum= 0;
+samplenum= 0 ;
 while(True):
-    ret,img=cam.read();
+    ret,img=cam.read() ;
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces= facedetect.detectMultiScale(gray,1.3,5)
     for(x,y,w,h) in faces:
@@ -33,7 +33,7 @@ while(True):
         cv2.imwrite("dataSet/User."+str(Id)+"."+str(samplenum)+".jpg",gray[y:y+h,x:x+w])
         cv2.rectangle(img,(x,y),(x+w,y+h),(0.255,0),2)
         cv2.waitKey(100);
-    cv2.imshow("Face",img)
+    cv2.imshow("face",img)
     cv2.waitKey(1);
     if(samplenum>20):
         break;
