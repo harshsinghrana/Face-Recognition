@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 recognizer = cv2.face.LBPHFaceRecognizer_create();
 path = "dataSet"
-def get_images_with_id(path):
+def get_images_with_id(path) :
     images_paths=[os.path.join(path,f) for f in os.listdir(path)]
     faces=[]
     ids=[]
